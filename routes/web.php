@@ -30,7 +30,7 @@ Route::get('/task', function () {
     
     return view('task',
                 [
-                    'maTache' => 'Tache numéro 1',
+                    'monProjet' => 'Projet numéro 1',
                     'tasks' => $tasks
                 ]
     );

@@ -4,16 +4,8 @@
 
   <h2>Task</h2>
   <p>Ceci est ma page task</p>
-
-  <?php echo $maTache; ?>
   
-  {{ $maTache }}
-
-  <ul>
-        <?php foreach ($tasks as $task ) : ?>
-    <li><?= $task; ?></li>
-        <?php endforeach; ?>
-  </ul>
+  <h3>Projet: {{ $monProjet }}</h3>
 
     <ul>
         @foreach ($tasks as $task )
