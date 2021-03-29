@@ -2,7 +2,7 @@
 
 @section('main')
 
-  <h2>Home</h2>
-  <p>Ceci est ma page Home</p>
+  <h2>Task</h2>
+  <p>Ceci est ma page task</p>
 
 @endsection
