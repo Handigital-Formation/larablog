@@ -23,5 +23,15 @@ Route::get('/contact', function () {
     return view('contact');
 });
 Route::get('/task', function () {
-    return view('task');
+    $tasks = [
+        'Apprendre laravel',
+        'Sortir me promener'
+    ];
+    
+    return view('task',
+                [
+                    'maTache' => 'Tache numéro 1',
+                    'tasks' => $tasks
+                ]
+    );
 });
