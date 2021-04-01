@@ -48,6 +48,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/task">Task</a></li>
+          <li><a href="/project">Project</a></li>
         </ul>
         <div class="title">
           <a href="/">

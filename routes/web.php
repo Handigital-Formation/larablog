@@ -41,3 +41,6 @@ use App\Http\Controllers\PagesController;
 Route::get('/', [PagesController::class, 'home']);
 Route::get('/contact', [PagesController::class, 'contact']);
 Route::get('/task', [PagesController::class, 'task']);
+
+use App\Http\Controllers\ProjectController;
+Route::get('/project', [ProjectController::class, 'index']);
