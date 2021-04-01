@@ -43,6 +43,7 @@ Route::get('/contact', [PagesController::class, 'contact']);
 Route::get('/task', [PagesController::class, 'task']);
 
 use App\Http\Controllers\ProjectController;
-Route::get('/project', [ProjectController::class, 'index']);
-Route::get('/project/create', [ProjectController::class, 'create']);
-Route::post('/project', [ProjectController::class, 'store']);
+/* Route::get('/project', [ProjectController::class, 'index']);
+ * Route::get('/project/create', [ProjectController::class, 'create']);
+ * Route::post('/project', [ProjectController::class, 'store']); */
+Route::resource('/project', ProjectController::class); 
