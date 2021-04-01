@@ -2,7 +2,12 @@
 
 @section('main')
 
-  <h2>Project</h2>
-  <p>Ceci est ma page project</p>
+  <h2>Project - Index</h2>
+
+  <ul>
+        @foreach ($projects as $project)
+          <li>{{ $project->title }}</li>
+        @endforeach
+  </ul>
 
 @endsection

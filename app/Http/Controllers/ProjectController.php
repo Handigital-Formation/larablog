@@ -10,6 +10,7 @@ class ProjectController extends Controller
     //
     public function index()
     {
-        return view('project.index');
+        $projects = Project::all();
+        return view('project.index', ['projects' => $projects]);
     }
 }
