@@ -45,8 +45,15 @@ class ProjectController extends Controller
          * $project->description = request('description');
 
          * $project->save(); // on enregistre dans la base */
+        /* $validation = request()->validate([
+         *     'title' => ['required','min:3','max:255'],
+         *     'description' => 'required'
+         * ]); */
 
-        Project::create(request(['title', 'description']));
+        Project::create(request()->validate([
+            'title' => ['required','min:3','max:255'],
+            'description' => 'required'
+        ]));
 
         return redirect('/project'); // méthode pour rediriger vers une autre url (en get par défaut)
     }

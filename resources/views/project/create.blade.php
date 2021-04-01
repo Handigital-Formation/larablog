@@ -4,14 +4,18 @@
 
   <h2>Project - Create</h2>
   <h3>Créer un nouveau projet</h3>
+
+  @error('title')
+    <p style="color:red">{{$errors->first('title')}}</p>
+  @enderror
   
   <form method="POST" action="/project">
     @csrf
         <div>
-            <input type="text" name="title" placeholder="Titre du projet">
+            <input @error('title') style="border-color:red" @enderror type="text" name="title" placeholder="Titre du projet" value="{{old('title')}}">
         </div>
         <div>
-            <textarea name="description" placeholder="Description du projet"></textarea>
+            <textarea name="description" placeholder="Description du projet">{{old('description')}}</textarea>
         </div>
         <div>
             <button type="submit">Créer le projet</button>
